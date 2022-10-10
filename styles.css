@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    transition: color 100ms ease-in-out, 
+        background-color 100ms ease-in-out;
+}
+
+html{
+    --padding: 10px;
+    --padding2: 30px;
+    --bg: rgb(2, 170, 16);
+    --bg2: #025c11;
+    --fg: aliceblue;
+    --accent: #f25f4c;
+}
+
+html.light{
+    --padding: 10px;
+    --padding2: 30px;
+    --bg: rgb(255, 255, 255);
+    --bg2: rgb(190, 180, 180);
+    --fg: aliceblue;
+    --accent: orange;
+    --accent-5: rgba(255, 166, 0, 0.5);
+
+}
+
+.panel{
+    background-color: var(--bg2);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 40px 1fr 60px;
+
+    gap: 10px;
+
+    min-height: 100vh;
+    margin: 0;    
+    background-color: var(--bg);
+    color: var(--fg);
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav{
+    grid-row: 1;
+    grid-column: 1 / 4;
+    background-color: var(--bg2);
+    list-style: none;
+}
+
+.nav-list{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-item:hover, .side-nav-item:hover{
+    background-color: var(--accent);
+}
+
+.nav-item, .side-nav-item{
+    display: block;
+    float: left;
+    align-items: center;
+    padding: var(--padding);
+    transition: background-color 200ms ease-in-out;
+}
+
+.side-contact{
+    grid-row: 2;
+    grid-column: 3;
+    background-color: var(--bg2);
+    padding: var(--padding);
+}
+
+.side-contact p{
+    margin-left: auto;
+    margin-right: auto;
+    color: #ddd;
+    font-size: 80%;
+}
+
+#content{
+    padding: calc(var(--padding) * 3);
+    grid-row: 2;
+    grid-column: 2;
+    background-color: var(--bg2);
+}
+
+#button{
+    background-color: #f25f4c;
+}
+
+#footer{
+    grid-row: 3;
+    grid-column: 1 / 4;
+    background-color: var(--bg2);
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 25px;
+}
